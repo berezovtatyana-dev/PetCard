@@ -3,7 +3,7 @@ import time
 class PerfomanceLoggingMiddleware:
     """замеряет время выполнения запроса"""
     def __init__(self, get_response):
-        '''get_response-самаView'''
+        '''get_response-сама View'''
         self.get_response = get_response
 
     def __call__(self, request):

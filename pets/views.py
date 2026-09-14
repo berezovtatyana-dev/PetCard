@@ -37,6 +37,8 @@ class PetUpdateView(LoginRequiredMixin, PetOwnerRequiredMixin, PageTitleMixin, U
     context_object_name = Pet
     page_title = 'Редактировать питомца'
     
+
+@method_decorator(cache_page(60*10), name='dispatch')
 class VetClinicDirectoryView(PageTitleMixin, TemplateView):
     template_name = 'pets/vet_clinic.html'
     page_title = 'Справочник ветеринарных клиник'
